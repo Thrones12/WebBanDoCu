@@ -14,7 +14,7 @@ public class DBConnection {
 	public Connection getConnection() throws Exception {
 
 		String url = "jdbc:mysql://" + serverName + ":" + portNumber + "/" + dbName;
-		
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		return DriverManager.getConnection(url, userID, password);
 	}
 	public static void main(String[] args) {

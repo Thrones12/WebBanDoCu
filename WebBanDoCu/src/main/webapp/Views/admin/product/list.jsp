@@ -8,6 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h5><a href="<c:url value='/admin/product/insert'></c:url>">Insert</a></h5>
+
 	<table border="1">
 		<tr>
 			<th>ID</th>
@@ -32,7 +34,12 @@
 				<td>${product.image}</td>
 				<td>${product.amount}</td>
 				<td>${product.stoke}</td>
-				<td>Update || Delete</td>
+				<td><a
+					href="<c:url value="/admin/product/update?product_id=${product.product_id}"></c:url>">
+						Update </a> <label> || </label> <a
+					href="<c:url value="/admin/product/delete?product_id=${product.product_id}"></c:url>">
+						Delete </a>
+				</td>
 			</tr>
 		</c:forEach>
 	</table>
