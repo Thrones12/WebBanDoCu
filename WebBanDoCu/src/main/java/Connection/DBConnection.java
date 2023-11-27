@@ -9,7 +9,7 @@ public class DBConnection {
 	private final String portNumber = "3306";
 	private final String dbName = "Webbandocu";
     String userID = "root";
-    String password = "Phong@123";
+    String password = "Nam1392003";
 	
 	public Connection getConnection() throws Exception {
 
