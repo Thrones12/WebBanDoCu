@@ -25,9 +25,7 @@ public class CategoryService implements ICategoryService{
 	@Override
 	public void update(Category category) {
 		// TODO Auto-generated method stub
-		Category oldcate = cateDAO.findById(category.getCategory_id());
-		oldcate.setCategory_id(category.getCategory_id());
-		oldcate.setCategory_name(category.getCategory_name());
+		cateDAO.update(category);
 	}
 
 	@Override

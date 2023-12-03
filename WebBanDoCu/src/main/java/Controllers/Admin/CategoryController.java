@@ -90,7 +90,7 @@ public class CategoryController extends HttpServlet{
 			e.printStackTrace();
 			req.setAttribute("error", "Chinh sua that bai");
 		}
-		resp.sendRedirect(req.getContextPath() + "category-list");
+		resp.sendRedirect(req.getContextPath() + "/category-list");
 	}
 
 
@@ -107,7 +107,7 @@ public class CategoryController extends HttpServlet{
 			e.printStackTrace();
 			req.setAttribute("error", "Them that bai");
 		}
-		resp.sendRedirect(req.getContextPath() + "category-list");
+		resp.sendRedirect(req.getContextPath() + "/category-list");
 	}	
 	
 }

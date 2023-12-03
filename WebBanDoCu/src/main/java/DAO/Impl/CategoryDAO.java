@@ -59,8 +59,8 @@ public class CategoryDAO implements ICategoryDAO {
         	Connection conn = new DBConnection().getConnection();
 			PreparedStatement ps = conn.prepareStatement(query);
 			
-            ps.setInt(1, category.getCategory_id());
-            ps.setString(2, category.getCategory_name());
+            ps.setInt(2, category.getCategory_id());
+            ps.setString(1, category.getCategory_name());
             ps.executeUpdate();
             conn.close();
         } catch (Exception e) {
