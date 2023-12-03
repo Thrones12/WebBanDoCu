@@ -16,7 +16,7 @@ public class DBConnection {
 	private final String portNumber = "3306";
 	private final String dbName = "azshop";
     String userID = "root";
-    String password = "Nam1392003";
+    String password = "123";
 	
 	public Connection getConnection() throws Exception {
 
