@@ -10,25 +10,31 @@ public class Product implements Serializable{
 	private String description;
 	private float price;
 	private int category_id;
-	private int seller_id;
+	private int supplier_id;
 	private String image;
-	private int amount;
-	private int stoke;
-	public Product(int product_id, String product_name, String description, float price, int category_id, int seller_id,
-			String image, int amount, int stoke) {
+	private int stock_quantity;
+	private int sold_quantity;
+	public Product() {
+		super();
+	}
+	public Product(int product_id, String product_name, String description, float price, int category_id,
+			int supplier_id, String image, int stock_quantity, int sold_quantity) {
 		super();
 		this.product_id = product_id;
 		this.product_name = product_name;
 		this.description = description;
 		this.price = price;
 		this.category_id = category_id;
-		this.seller_id = seller_id;
+		this.supplier_id = supplier_id;
 		this.image = image;
-		this.amount = amount;
-		this.stoke = stoke;
+		this.stock_quantity = stock_quantity;
+		this.sold_quantity = sold_quantity;
 	}
-	public Product() {
-		super();
+	@Override
+	public String toString() {
+		return "Product [product_id=" + product_id + ", product_name=" + product_name + ", description=" + description
+				+ ", price=" + price + ", category_id=" + category_id + ", supplier_id=" + supplier_id + ", image="
+				+ image + ", stock_quantity=" + stock_quantity + ", sold_quantity=" + sold_quantity + "]";
 	}
 	public int getProduct_id() {
 		return product_id;
@@ -60,11 +66,11 @@ public class Product implements Serializable{
 	public void setCategory_id(int category_id) {
 		this.category_id = category_id;
 	}
-	public int getSeller_id() {
-		return seller_id;
+	public int getSupplier_id() {
+		return supplier_id;
 	}
-	public void setSeller_id(int seller_id) {
-		this.seller_id = seller_id;
+	public void setSupplier_id(int supplier_id) {
+		this.supplier_id = supplier_id;
 	}
 	public String getImage() {
 		return image;
@@ -72,22 +78,17 @@ public class Product implements Serializable{
 	public void setImage(String image) {
 		this.image = image;
 	}
-	public int getAmount() {
-		return amount;
+	public int getStock_quantity() {
+		return stock_quantity;
 	}
-	public void setAmount(int amount) {
-		this.amount = amount;
+	public void setStock_quantity(int stock_quantity) {
+		this.stock_quantity = stock_quantity;
 	}
-	public int getStoke() {
-		return stoke;
+	public int getSold_quantity() {
+		return sold_quantity;
 	}
-	public void setStoke(int stoke) {
-		this.stoke = stoke;
+	public void setSold_quantity(int sold_quantity) {
+		this.sold_quantity = sold_quantity;
 	}
-	@Override
-	public String toString() {
-		return "Product [product_id=" + product_id + ", product_name=" + product_name + ", description=" + description
-				+ ", price=" + price + ", category_id=" + category_id + ", seller_id=" + seller_id + ", image=" + image
-				+ ", amount=" + amount + ", stoke=" + stoke + "]";
-	}
+
 }

@@ -42,8 +42,7 @@ public class ProductService implements IProductService{
 
 	@Override
 	public List<Product> findByCategory(int category_id) {
-		// TODO Auto-generated method stub
-		return null;
+		return proDAO.findByCategory(category_id);
 	}
 
 }

@@ -1,38 +1,46 @@
 package Connection;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 
+import Models.Bill;
+import Models.BillDetail;
+import Models.Cart;
 import Models.Category;
 import Models.Permission;
 import Models.Supplier;
+import Models.ViewedProduct;
+import Services.Impl.BillDetailService;
+import Services.Impl.BillService;
+import Services.Impl.CartService;
 import Services.Impl.CategoryService;
 import Services.Impl.PermissionService;
 import Services.Impl.SupplierService;
+import Services.Impl.ViewedProductService;
 
 public class DBConnection {
 	// Thông tin kết nối
 	private final String serverName = "localhost";
 	private final String portNumber = "3306";
 	private final String dbName = "azshop";
-    String userID = "root";
-    String password = "123";
-	
+	String userID = "root";
+	String password = "123";
+
 	public Connection getConnection() throws Exception {
 
 		String url = "jdbc:mysql://" + serverName + ":" + portNumber + "/" + dbName;
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		return DriverManager.getConnection(url, userID, password);
 	}
+
 	public static void main(String[] args) {
-
-		try (Connection conn = new DBConnection().getConnection()){
-            System.out.println("Ket noi thanh cong");
-
-        } catch (Exception e) {
-            System.err.println("Lỗi kết nối đến cơ sở dữ liệu!");
-            e.printStackTrace();
-        }
-
+		try (Connection conn = new DBConnection().getConnection()) {
+			System.out.println("Ket noi thanh cong");
+		} catch (Exception e) {
+			System.err.println("Lỗi kết nối đến cơ sở dữ liệu!");
+			e.printStackTrace();
+		}
 	}
 }

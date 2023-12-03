@@ -50,6 +50,11 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>LTWeb</groupId>
+			<artifactId>BanHang</artifactId>
+			<version>1.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>

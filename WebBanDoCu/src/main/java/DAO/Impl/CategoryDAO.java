@@ -20,8 +20,8 @@ public class CategoryDAO implements ICategoryDAO {
         List<Category> listcate = new ArrayList<Category>();
         String query = "SELECT * FROM categories";
         try {
-        	Connection conn = new DBConnection().getConnection();
-			PreparedStatement ps = conn.prepareStatement(query);
+        	conn = new DBConnection().getConnection();
+			ps = conn.prepareStatement(query);
             rs = ps.executeQuery();
             while (rs.next()) {
                 Category category = new Category();
