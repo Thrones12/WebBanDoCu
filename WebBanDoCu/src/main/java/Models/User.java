@@ -12,12 +12,14 @@ public class User implements Serializable {
 	private String email;
 	private String code;
 	private int role;
+	private int status;
 	
 	public User() {
 		super();
 	}
 
-	public User(int userID, String userName, String password, String email, String code, int role) {
+	
+	public User(int userID, String userName, String password, String email, String code, int role, int status) {
 		super();
 		this.userID = userID;
 		this.userName = userName;
@@ -25,7 +27,9 @@ public class User implements Serializable {
 		this.email = email;
 		this.code = code;
 		this.role = role;
+		this.status = status;
 	}
+
 
 	public int getUserID() {
 		return userID;
@@ -74,6 +78,16 @@ public class User implements Serializable {
 	public void setRole(int role) {
 		this.role = role;
 	}
+
+	public int getStatus() {
+		return status;
+	}
+
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
 
 	@Override
 	public String toString() {

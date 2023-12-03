@@ -24,6 +24,7 @@
 			<th>Password</th>
 			<th>Email</th>
 			<th>Role</th>
+			<th>Status</th>
 			<th>Action</th>
 		</tr>
 		<c:forEach var="i" items="${listuser}" >
@@ -33,6 +34,7 @@
 				<td>${i.password}</td>
 				<td>${i.email}</td>
 				<td>${i.role}</td>
+				<td>${i.status}</td>
 				<td><a
 					href="<c:url value="/admin/user/update?id=${i.userID}"></c:url>">
 						Update </a> <label> || </label> <a

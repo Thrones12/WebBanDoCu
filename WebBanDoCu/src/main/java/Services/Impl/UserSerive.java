@@ -35,6 +35,7 @@ public class UserSerive implements IUserService {
 		olduser.setPassword(model.getPassword());
 		olduser.setEmail(model.getEmail());
 		olduser.setRole(model.getRole());
+		olduser.setStatus(model.getStatus());
 		
 		userDao.update(olduser);
 	}

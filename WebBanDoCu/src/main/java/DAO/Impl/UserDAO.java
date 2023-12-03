@@ -28,6 +28,7 @@ public class UserDAO implements IUserDAO {
 				model.setEmail(rs.getString("email"));
 				model.setCode(rs.getString("code"));
 				model.setRole(rs.getInt("role"));
+				model.setStatus(rs.getInt("status"));
 				listuser.add(model);
 			}
 			conn.close();
@@ -39,16 +40,16 @@ public class UserDAO implements IUserDAO {
 
 	@Override
 	public void insert(User model) {
-		String sql = "Insert into users(user_id, username, password, email, role) values(?, ?, ?, ?, ?)";
+		String sql = "Insert into users(username, password, email, role, status) values(?, ?, ?, ?, ?)";
 		try {
 			Connection conn = new DBConnection().getConnection();
 			PreparedStatement ps = conn.prepareStatement(sql);
 			
-			ps.setInt(1, model.getUserID());
-			ps.setString(2, model.getUserName());
-			ps.setString(3, model.getPassword());
-			ps.setString(4, model.getEmail());
-			ps.setInt(5, model.getRole());
+			ps.setString(1, model.getUserName());
+			ps.setString(2, model.getPassword());
+			ps.setString(3, model.getEmail());
+			ps.setInt(4, model.getRole());
+			ps.setInt(5, model.getStatus());
 			ps.executeUpdate();
 			conn.close();
 		} catch (Exception e) {
@@ -72,6 +73,7 @@ public class UserDAO implements IUserDAO {
 				model.setEmail(rs.getString("email"));
 				model.setCode(rs.getString("code"));
 				model.setRole(rs.getInt("role"));
+				model.setStatus(rs.getInt("status"));
 			}
 			conn.close();
 		} catch (Exception e) {
@@ -82,7 +84,7 @@ public class UserDAO implements IUserDAO {
 
 	@Override
 	public void update(User model) {
-		String sql = "update users set username=?, password=?, email=?, role=? where user_id=?";
+		String sql = "update users set username=?, password=?, email=?, role=?, status=? where user_id=?";
 		try {
 			Connection conn = new DBConnection().getConnection();
 			PreparedStatement ps = conn.prepareStatement(sql);
@@ -91,7 +93,8 @@ public class UserDAO implements IUserDAO {
 			ps.setString(2, model.getPassword());
 			ps.setString(3, model.getEmail());
 			ps.setInt(4, model.getRole());
-			ps.setInt(5, model.getUserID());
+			ps.setInt(5, model.getStatus());
+			ps.setInt(6, model.getUserID());
 			ps.executeUpdate();
 			conn.close();
 		} catch (Exception e) {

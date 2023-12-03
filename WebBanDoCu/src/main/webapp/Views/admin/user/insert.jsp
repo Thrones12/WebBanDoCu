@@ -9,9 +9,6 @@
 </head>
 <body>
 	<form action="insert" method="post">
-		<Label>ID</Label><br> 
-		<input type="text" name="userID" /><br>
-	
 		<Label>Name</Label><br> 
 		<input type="text" name="userName" /><br>
 		
@@ -23,6 +20,9 @@
 			
 		<Label>Role</Label><br> <input type="text"
 			name="role" /><br> 
+			
+		<Label>Status</Label><br> <input type="text"
+			name="status" /><br> 
 		
 		<input type="submit"
 			value="User insert" />

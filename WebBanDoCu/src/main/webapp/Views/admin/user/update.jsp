@@ -24,6 +24,9 @@
 		<Label>Role</Label><br> 
 		<input type="text" name="role" value="${user.role}"/><br> 
 		
+		<Label>Status</Label><br> 
+		<input type="text" name="status" value="${user.status}"/><br> 
+		
 		<input type="submit" value="User update"/>
 	</form>
 </body>
