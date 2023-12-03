@@ -3,13 +3,20 @@ package Connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+import Models.Category;
+import Models.Permission;
+import Models.Supplier;
+import Services.Impl.CategoryService;
+import Services.Impl.PermissionService;
+import Services.Impl.SupplierService;
+
 public class DBConnection {
 	// Thông tin kết nối
 	private final String serverName = "localhost";
 	private final String portNumber = "3306";
-	private final String dbName = "Webbandocu";
+	private final String dbName = "azshop";
     String userID = "root";
-    String password = "Nam1392003";
+    String password = "123";
 	
 	public Connection getConnection() throws Exception {
 
@@ -22,7 +29,6 @@ public class DBConnection {
 		try (Connection conn = new DBConnection().getConnection()){
             System.out.println("Ket noi thanh cong");
 
-            // Thêm mã xử lý cơ sở dữ liệu ở đây nếu cần
         } catch (Exception e) {
             System.err.println("Lỗi kết nối đến cơ sở dữ liệu!");
             e.printStackTrace();
