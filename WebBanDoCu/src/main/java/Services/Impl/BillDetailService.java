@@ -30,6 +30,7 @@ public class BillDetailService implements IBillDetailService {
 		oldmodel.setQuantity(billDetail.getQuantity());
 		oldmodel.setPrice(billDetail.getPrice());
 		
+		bdDAO.update(oldmodel);
 	}
 
 	@Override
