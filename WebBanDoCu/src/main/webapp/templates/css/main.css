@@ -1047,7 +1047,6 @@ h2.title {
 #recommended-item-carousel .carousel-inner .item {
   padding-left: 0;
 }
-
 .recommended-item-control {
   position: absolute;
   top: 41%;
@@ -1067,6 +1066,83 @@ h2.title {
 .recommended_items  h2 {
 }
 
+.same_cate_items {
+  overflow: hidden;
+}
+
+#same_cate-item-carousel .carousel-inner .item {
+  padding-left: 0;
+}
+.same_cate-item-control {
+  position: absolute;
+  top: 41%;
+}
+
+.same_cate-item-control i {
+  background: none repeat scroll 0 0 #FE980F;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 4px 10px;
+}
+
+.same_cate-item-control i:hover {
+  background: #ccccc6;
+}
+
+.same_cate_items  h2 {
+}
+
+.same_supplier {
+  overflow: hidden;
+}
+
+#same_supplier-item-carousel .carousel-inner .item {
+  padding-left: 0;
+}
+.same_supplier-item-control {
+  position: absolute;
+  top: 41%;
+}
+
+.same_supplier-item-control i {
+  background: none repeat scroll 0 0 #FE980F;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 4px 10px;
+}
+
+.same_supplier-item-control i:hover {
+  background: #ccccc6;
+}
+
+.same_supplier_items  h2 {
+}
+
+.viewed_products {
+  overflow: hidden;
+}
+
+#viewed_products-item-carousel .carousel-inner .item {
+  padding-left: 0;
+}
+.viewed_products-item-control {
+  position: absolute;
+  top: 41%;
+}
+
+.viewed_products-item-control i {
+  background: none repeat scroll 0 0 #FE980F;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 4px 10px;
+}
+
+.viewed_products-item-control i:hover {
+  background: #ccccc6;
+}
+
+.viewed_products_items  h2 {
+}
 .our_partners{
   overflow:hidden;
 }

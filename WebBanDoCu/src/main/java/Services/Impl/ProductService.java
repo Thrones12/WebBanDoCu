@@ -45,4 +45,14 @@ public class ProductService implements IProductService{
 		return proDAO.findByCategory(category_id);
 	}
 
+	@Override
+	public List<Product> findBySupplier(int supplier_id) {
+		return proDAO.findBySupplier(supplier_id);
+	}
+
+	@Override
+	public int countByCategory(int category_id) {
+		return proDAO.countByCategory(category_id);
+	}
+
 }

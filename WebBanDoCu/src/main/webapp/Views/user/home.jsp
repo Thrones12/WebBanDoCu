@@ -17,20 +17,15 @@
 					<div class="product-image-wrapper">
 						<div class="single-products">
 							<div class="productinfo text-center">
-								<img style="width:270px; height:270px" src="templates/images/product/${product.image}" alt="" />
+								<a
+									href="<c:url value='/product-detail?product_id=${product.product_id}'></c:url>">
+									<img style="width: 270px; height: 270px"
+									src="templates/images/product/${product.image}" alt="" />
+								</a>
 								<h2>$${product.price }</h2>
 								<p>${product.image }</p>
 								<a href="#" class="btn btn-default add-to-cart"><i
 									class="fa fa-shopping-cart"></i>Add to cart</a>
-							</div>
-							<div class="product-overlay">
-								<div class="overlay-content">
-									<h2>${product.description }</h2>
-									<h2>$${product.price }</h2>
-									<p>${product.product_name }</p>
-									<a href="#" class="btn btn-default add-to-cart"><i
-										class="fa fa-shopping-cart"></i>Add to cart</a>
-								</div>
 							</div>
 						</div>
 						<div class="choose">
